@@ -47,6 +47,7 @@ pub fn get_chain_for_coingecko_platform_id(id: &str) -> Option<Chain> {
         "xrp" => Some(Chain::Xrp),
         "hyperliquid" => Some(Chain::Hyperliquid),
         "sonic" => Some(Chain::Sonic),
+        "monad" => Some(Chain::Monad), // FIXME verify
         _ => None,
     }
 }
@@ -97,5 +98,6 @@ pub fn get_coingecko_market_id_for_chain(chain: Chain) -> &'static str {
         Chain::Cardano => "cardano",
         Chain::Berachain => "berachain-bera",
         Chain::Hyperliquid => "hyperliquid",
+        Chain::Monad => "monad",
     }
 }
